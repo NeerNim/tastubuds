@@ -1,3 +1,7 @@
+import Navigation from "./navigation";
+
+Navigation();
+
 let contentHolder = document.getElementById("content");
 let h1 = document.createElement("h1");
 contentHolder.appendChild(h1);
