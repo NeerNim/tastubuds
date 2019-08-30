@@ -1,13 +1,15 @@
 body {
   margin: 0;
   padding: 0;
-  color: red;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 6em;
   color: white;
-  padding: 0 0 4em 0;
+  padding: 0 0 2em 0;
+  font-weight: 500;
 }
 
 #content {
@@ -16,10 +18,11 @@ h1 {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background: url("./images/cover.jpeg") no-repeat center center fixed;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("./images/cover.jpeg") no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  opacity: 0.8;
 }
