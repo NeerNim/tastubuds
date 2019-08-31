@@ -1,12 +1,20 @@
 export default function Navigation() {
   let htmlContainer = document.getElementById("content");
 
-  let navul = document.createElement("ul");
-  let navli = document.createElement("li");
+  let list = ["Home", "About", "Menu", "Contact"];
 
-  navli.textContent = "Home";
-  navli.textContent = "About";
+  function createNavlinks(array) {
+    let navul = document.createElement("ul");
+    for (let link of array) {
+      let item = document.createElement("li");
+      let aTag = document.createElement("a");
+      aTag.setAttribute("href", "#");
+      item.appendChild(aTag);
+      aTag.appendChild(document.createTextNode(link));
+      navul.appendChild(item);
+    }
+    return navul;
+  }
 
-  navul.appendChild(navli);
-  htmlContainer.appendChild(navul);
+  htmlContainer.appendChild(createNavlinks(list));
 }
